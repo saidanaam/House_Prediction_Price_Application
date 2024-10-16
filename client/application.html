@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banglore Home Price Prediction </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="application.js"></script>
+    <link rel="stylesheet" href="application.css">
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="total_sqft">Total Sqft:</label>
+            <input type="number" id="total_sqft" name="total_sqft" placeholder="Entrez la superficie" required>
+
+            <label for="bed">Bed:</label>
+            <select id="bed" name="bed" required>
+                <option value="" disabled selected>Nombre de chambres</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <label for="bath">Bath:</label>
+            <select id="bath" name="bath" required>
+                <option value="" disabled selected>Nombre de salles de bain</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="location">Location:</label>
+            <select class="location" name="" id="uiLocations">
+                <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+                    <option>Electronic City</option>
+                    <option>Rajaji Nagar</option>
+            </select>
+
+            <button type="button" onclick="onClickedEstimatePrice(event)">Prédire le prix</button>
+            <div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+        </form>
+    </div>
+</body>
+</html>
